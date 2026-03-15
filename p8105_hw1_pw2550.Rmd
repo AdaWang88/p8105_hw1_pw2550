@@ -1,0 +1,11 @@
+---
+title: "p8105_hw1_pw2550"
+author: Ada Wang
+date: "2026-03-15"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
