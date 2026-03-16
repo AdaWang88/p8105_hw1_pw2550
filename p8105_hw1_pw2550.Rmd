@@ -9,3 +9,25 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Problem 1
+```{r}
+library(moderndive)
+data("penguins")
+
+data("early_january_weather")
+```
+
+* The variables in the "early_january_weather" dataset contains the following variables:
+  * origin: Weather station. Named origin to facilitate merging with nycflights13::flights data.
+  * year, month, day, hour: Time of recording.
+  * temp, dewp: Temperature and dewpoint in F.
+  * humid: Relative humidity.
+  * wind_dir, wind_speed, wind_gust: Wind direction (in degrees), speed and gust speed (in mph).
+  * precip: Precipitation, in inches.
+  * pressure: Sea level pressure in millibars.
+  * visib: Visibility in miles.
+  * time_hour: Date and hour of the recording as a POSIXct date.
+
+* This data contains `r nrow(early_january_weather)` observations and `r ncol(early_january_weather)` variables.
+
+* The mean temperature in early January is `r mean(early_january_weather$temp)` Fahrenheit degrees.
