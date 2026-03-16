@@ -47,3 +47,23 @@ ggsave("scatterplot of temperature.pdf")
 
 * The temperature rises as the time goes. 
 
+# Problem 2 
+```{r data frame}
+library(tidyverse)
+
+set.seed(100)
+
+sample <- rnorm(10)
+
+df <- data.frame(
+  vec_sample = sample,
+  vec_logical = sample > 0,
+  vec_character = sample(letters, 10),
+  vec_factor = factor(sample(c("A", "B", "C"), 10, replace = TRUE))
+)
+
+df
+```
+
+
+
