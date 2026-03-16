@@ -65,5 +65,17 @@ df <- data.frame(
 df
 ```
 
+```{r mean, results = "hide"}
+vec_sample_mean <- mean(df$vec_sample)
+vec_logical_mean <- mean(df$vec_logical)
+vec_character_mean <- mean(as.numeric(df$vec_character))
+vec_factor_mean <- mean(as.numeric(df$vec_factor))
+```
+
+* I can pull out the mean of vec_sample and vec_logical at the beginning, but failed in the others.
+  * vec_sample is numeric at the first place and it makes sense that it can be pulled out the mean.
+  * vec_logical shows that TRUE is 1 and FALSE is 0, therefore the average is 0.5 since the sample data are normal distributed.
+* After converting to the numeric variables, all values in vec_character are converted to NA and their mean is NA as well.
+* After converting to the numeric variables, the levels in vec_factor are converted to be 1, 2 and 3. Therefore their mean can be calculated.
 
 
